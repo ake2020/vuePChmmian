@@ -1,6 +1,10 @@
 <template>
-  <el-button>默认按钮</el-button>
+<div id="app">
+  <router-view></router-view>
+</div>
 </template>
+
+
 
 <script>
 export default {
@@ -8,6 +12,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 
+@import url(~@/style/base.css);
 </style>
