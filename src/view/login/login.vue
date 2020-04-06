@@ -37,21 +37,32 @@
             <el-form-item>
               <el-button class="btn" type="primary" :plain="true" @click="loginClick">登录</el-button>
               <br>
-              <el-button class="btn" type="primary">注册</el-button>
+              <el-button class="btn" type="primary" @click="registerClick">注册</el-button>
             </el-form-item>
           </el-form>
         </div>
+        
       </div>
     </div>
     <div class="right">
       <img src="@/assets/img/login_banner_ele.png" alt />
     </div>
+    <div>
+      <!-- 将组件已标签的形式定义到html中 -->
+      <register ref="register"></register>
+    </div>
   </div>
 </template>
 
 <script>
+// 导入子组件
+import register from './register.vue'; 
 export default {
   name: "login",
+  // 注册子组件
+  components:{
+    register
+  },
   data() {
     return {
       form:{
@@ -83,6 +94,9 @@ export default {
           this.$message.success(result + '')
        }
       )
+    },
+    registerClick(){
+      this.$refs.register.dialogFormVisible=true
     }
   },
 };
