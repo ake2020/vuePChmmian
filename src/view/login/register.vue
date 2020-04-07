@@ -1,6 +1,6 @@
 <template>
   <el-dialog :visible.sync="dialogFormVisible" class="register" width="600px" :show-close="false">
-    <div slot="title" class="title">用户注册123</div>
+    <div slot="title" class="title">用户注册</div>
   </el-dialog>
 </template>
 
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .register {
   .title {
     height: 53px;
@@ -24,6 +24,13 @@ export default {
     color: #000;
     text-align: center;
   }
+//   .el-dialog__header {
+//     padding: 0;
+//   }
+}
+</style>
+<style lang="less">
+.register {
   .el-dialog__header {
     padding: 0;
   }

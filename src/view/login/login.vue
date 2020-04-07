@@ -87,6 +87,9 @@ export default {
       }
     };
   },
+  // created() {
+  //   alert(process.env.VUE_APP_URL);
+  // },
   methods: {
     loginClick(){
       // this.$refs.form.validate 全局表单验证
